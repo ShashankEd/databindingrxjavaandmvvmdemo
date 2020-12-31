@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">DatabindingRXAndMVVMApp</string>
+    <string name="END_POINT">https://api.nomics.com/v1/</string>
+    <string name="EASY_END_POINT">https://easy-business-app.herokuapp.com/</string>
+    <string name="API_KEY">75d48fc8f769fcddd98ea7c2f429c8b8</string>
 </resources>
