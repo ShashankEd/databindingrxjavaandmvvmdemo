@@ -1,7 +1,9 @@
 package com.coder.databindingrxandmvvmapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import com.coder.databindingrxandmvvmapp.classes.User
 import com.coder.databindingrxandmvvmapp.databinding.ActivityMainBinding
@@ -12,6 +14,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_main)
         bindData();
+        moveToCryptoScreen();
+    }
+
+    private fun moveToCryptoScreen() {
+        var btn = findViewById(R.id.button) as Button;
+        btn.setOnClickListener {
+            val intent = Intent(applicationContext,CryptoPriceActivity::class.java).apply{
+            }
+            startActivity(intent);
+        }
     }
     //method which binds the daya to view, it is late binding, as the value is not being assigned at the on-create of the activity
     private fun bindData() {
