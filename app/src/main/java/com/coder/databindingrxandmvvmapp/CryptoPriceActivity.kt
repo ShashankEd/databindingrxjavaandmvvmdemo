@@ -3,6 +3,8 @@ package com.coder.databindingrxandmvvmapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.ProgressBar
 
 import android.widget.Toast
 import com.coder.databindingrxandmvvmapp.adapter.MyAdapter
@@ -26,9 +28,11 @@ class CryptoPriceActivity : AppCompatActivity(),MyAdapter.Listener {
     private var myAdapter: MyAdapter? = null
     private var myCompositeDisposable: CompositeDisposable? = null
     private var myRetroCryptoArrayList: ArrayList<RetroCrypto>? = null
+    private var spinner: ProgressBar? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crypto_price)
+        spinner = findViewById(R.id.progressBar) as ProgressBar;
         myCompositeDisposable = CompositeDisposable()
         initRecyclerView()
         try {
@@ -66,6 +70,10 @@ class CryptoPriceActivity : AppCompatActivity(),MyAdapter.Listener {
         myAdapter = MyAdapter(myRetroCryptoArrayList!!, this) // through this listener CryptoPriceActivity and MyAdapter will communicate
         //Set the adapter to the recycler view//
         cryptocurrency_list.adapter = myAdapter
+        //once response comes then disable the progressbar
+        if( cryptoList.size.toInt() !=0) {
+            spinner?.visibility = View.GONE;
+        }
     }
 
     override fun onItemClick(retroCrypto: RetroCrypto) {

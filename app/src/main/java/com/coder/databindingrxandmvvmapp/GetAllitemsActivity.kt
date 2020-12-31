@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import android.util.Log
+import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -19,17 +21,21 @@ import com.coder.databindingrxandmvvmapp.adapter.ItemAdapter
 import com.coder.databindingrxandmvvmapp.classes.Item
 import kotlinx.android.synthetic.main.activity_get_allitems.*
 import java.lang.Exception
+import kotlin.math.log
+import kotlin.reflect.typeOf
 
 class GetAllitemsActivity : AppCompatActivity(),ItemAdapter.Listener {
 
     private var itemAdapter: ItemAdapter? = null
     private var myCompositeDisposable: CompositeDisposable? = null
     private var myItemList: ArrayList<Item>? = null
+    private var spinner:ProgressBar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_allitems)
         myCompositeDisposable = CompositeDisposable()
+        spinner = findViewById(R.id.progressBar) as ProgressBar;
         initRecyclerView()
         try {
             loadStoreItems()
@@ -62,6 +68,11 @@ class GetAllitemsActivity : AppCompatActivity(),ItemAdapter.Listener {
         myItemList = ArrayList(itemList);
         itemAdapter = ItemAdapter(myItemList!!,this);
         item_recycler_list.adapter = itemAdapter;
+        Log.d("Size", itemList.size.toInt().toString())
+        if( itemList.size.toInt() !=0) {
+            Log.d("inside if:::::: ","IF")
+            spinner?.visibility = View.GONE;
+        }
     }
 
     override fun onStoreItemClick(item: Item) {
