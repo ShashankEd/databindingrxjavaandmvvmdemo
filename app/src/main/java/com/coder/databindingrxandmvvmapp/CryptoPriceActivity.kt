@@ -21,7 +21,7 @@ import com.coder.databindingrxandmvvmapp.`interface`.GetData
 import kotlinx.android.synthetic.main.activity_crypto_price.*
 import java.lang.Exception
 
-class CryptoPriceActivity : AppCompatActivity(), MyAdapter.Listener {
+class CryptoPriceActivity : AppCompatActivity(),MyAdapter.Listener {
 
     private var myAdapter: MyAdapter? = null
     private var myCompositeDisposable: CompositeDisposable? = null
@@ -43,7 +43,7 @@ class CryptoPriceActivity : AppCompatActivity(), MyAdapter.Listener {
         cryptocurrency_list.layoutManager = layoutManager;
     }
 
-    //Implement loadData//
+    //Implement loadData for crypto api//
     private fun loadData() {
         //Define the Retrofit request//
         val requestInterface = Retrofit.Builder()
@@ -60,6 +60,7 @@ class CryptoPriceActivity : AppCompatActivity(), MyAdapter.Listener {
         )
     }
 
+    //for crypto api
     private fun handleResponse(cryptoList: List<RetroCrypto>) {
         myRetroCryptoArrayList = ArrayList(cryptoList)
         myAdapter = MyAdapter(myRetroCryptoArrayList!!, this) // through this listener CryptoPriceActivity and MyAdapter will communicate

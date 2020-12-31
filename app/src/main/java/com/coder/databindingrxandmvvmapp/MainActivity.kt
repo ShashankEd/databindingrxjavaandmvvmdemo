@@ -19,8 +19,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun moveToCryptoScreen() {
         var btn = findViewById(R.id.button) as Button;
+        var btn2 = findViewById(R.id.button2) as Button;
         btn.setOnClickListener {
             val intent = Intent(applicationContext,CryptoPriceActivity::class.java).apply{
+            }
+            startActivity(intent);
+        }
+        btn2.setOnClickListener {
+            val intent = Intent(applicationContext,GetAllitemsActivity::class.java).apply{
             }
             startActivity(intent);
         }
