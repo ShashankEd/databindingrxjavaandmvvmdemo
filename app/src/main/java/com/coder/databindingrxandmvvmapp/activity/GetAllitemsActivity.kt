@@ -1,4 +1,4 @@
-package com.coder.databindingrxandmvvmapp
+package com.coder.databindingrxandmvvmapp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,13 +16,12 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.coder.databindingrxandmvvmapp.R
 import com.coder.databindingrxandmvvmapp.`interface`.GetAllItems
 import com.coder.databindingrxandmvvmapp.adapter.ItemAdapter
 import com.coder.databindingrxandmvvmapp.classes.Item
 import kotlinx.android.synthetic.main.activity_get_allitems.*
 import java.lang.Exception
-import kotlin.math.log
-import kotlin.reflect.typeOf
 
 class GetAllitemsActivity : AppCompatActivity(),ItemAdapter.Listener {
 

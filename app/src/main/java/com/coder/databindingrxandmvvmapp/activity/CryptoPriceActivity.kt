@@ -1,4 +1,4 @@
-package com.coder.databindingrxandmvvmapp
+package com.coder.databindingrxandmvvmapp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,6 +19,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.coder.databindingrxandmvvmapp.R
 import com.coder.databindingrxandmvvmapp.`interface`.GetData
 import kotlinx.android.synthetic.main.activity_crypto_price.*
 import java.lang.Exception
