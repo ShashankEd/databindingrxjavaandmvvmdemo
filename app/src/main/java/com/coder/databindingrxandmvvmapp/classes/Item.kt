@@ -1,3 +1,6 @@
 package com.coder.databindingrxandmvvmapp.classes
 
-data class Item(val itemName : String, val itemCost : String)
+class Item {
+    lateinit var itemName : String
+    lateinit var itemCost : String
+}

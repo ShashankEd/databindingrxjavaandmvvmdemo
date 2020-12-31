@@ -1,3 +1,6 @@
 package com.coder.databindingrxandmvvmapp.classes
 
-data class RetroCrypto(val currency : String, val price : String)
+class RetroCrypto {
+    lateinit var currency : String
+    lateinit var price : String
+}
