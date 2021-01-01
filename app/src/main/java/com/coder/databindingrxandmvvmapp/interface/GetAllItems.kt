@@ -1,6 +1,6 @@
 package com.coder.databindingrxandmvvmapp.`interface`
 
-import com.coder.databindingrxandmvvmapp.classes.Item
+import com.coder.databindingrxandmvvmapp.models.Item
 import io.reactivex.Observable
 import retrofit2.http.GET
 

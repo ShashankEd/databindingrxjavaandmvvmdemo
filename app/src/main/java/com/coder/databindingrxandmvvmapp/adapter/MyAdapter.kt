@@ -3,7 +3,7 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.coder.databindingrxandmvvmapp.classes.RetroCrypto
+import com.coder.databindingrxandmvvmapp.models.RetroCrypto
 import kotlinx.android.synthetic.main.row_layout.view.*
 import androidx.recyclerview.widget.RecyclerView
 import com.coder.databindingrxandmvvmapp.R

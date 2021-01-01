@@ -1,4 +1,4 @@
-package com.coder.databindingrxandmvvmapp.classes
+package com.coder.databindingrxandmvvmapp.models
 
 class Item {
     lateinit var itemName : String

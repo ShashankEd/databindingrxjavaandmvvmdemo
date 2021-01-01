@@ -1,6 +1,6 @@
 package com.coder.databindingrxandmvvmapp.adapter
 
-import com.coder.databindingrxandmvvmapp.classes.Item
+import com.coder.databindingrxandmvvmapp.models.Item
 import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater

@@ -26,6 +26,8 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
     //defined a constant for gradle version
     def gradle_version = "6.1.1"
     implementation fileTree(dir: "libs", include: ["*.jar"])

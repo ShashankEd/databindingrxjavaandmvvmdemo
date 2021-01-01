@@ -1,4 +1,4 @@
-package com.coder.databindingrxandmvvmapp.classes
+package com.coder.databindingrxandmvvmapp.models
 
 class RetroCrypto {
     lateinit var currency : String

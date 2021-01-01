@@ -1,4 +1,4 @@
-package com.coder.databindingrxandmvvmapp.activity
+package com.coder.databindingrxandmvvmapp.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
